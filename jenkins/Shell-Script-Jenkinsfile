@@ -1,0 +1,26 @@
+pipeline {
+    stages {
+        stage('Checkout')
+            steps {
+                sh '''
+                ls
+                pwd
+                '''
+            }
+        stage('Shell-Script')
+            steps {
+                sh '''
+                ls
+                pwd
+                '''
+            }   
+    }
+}
+        
+        
+        
+        
+        
+        
+        
+        
