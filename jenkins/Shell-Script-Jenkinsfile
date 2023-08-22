@@ -7,11 +7,11 @@ pipeline {
         Ver1 = "pwd"
     }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-credentails', url: 'https://github.com/Veeranki-Ramya/Training.git']])
-            }
-        }
+        //stage('Checkout') {
+            //steps {
+                //checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-credentails', url: 'https://github.com/Veeranki-Ramya/Training.git']])
+            //}
+        //} 
         stage('Shell-Script') {
             steps {
                 sh '''
