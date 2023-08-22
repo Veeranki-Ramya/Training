@@ -4,13 +4,27 @@ pipeline {
     }
     environment{
         Ver = "ls"
+        Ver1 = "pwd"
     }
     stages {
         stage('Checkout') {
             steps {
                 sh '''
-                ls
-                pwd
+                $Ver1
+                '''
+            }
+        }
+        stage('Shell-Script') {
+            steps {
+                sh '''
+                $Ver
+                '''
+            }   
+    }
+            stage('Checkout') {
+            steps {
+                sh '''
+                $Ver1
                 '''
             }
         }
