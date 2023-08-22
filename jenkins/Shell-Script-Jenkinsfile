@@ -1,4 +1,7 @@
 pipeline {
+    agent {
+        label 'my-agent'
+    }
     environment{
         ver = "test"
         ver1 = "testing"
