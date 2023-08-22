@@ -11,7 +11,8 @@ pipeline {
                 pwd
                 '''
             }
-        stage('Shell-Script')
+        }
+        stage('Shell-Script') {
             steps {
                 sh '''
                 ls
@@ -20,6 +21,7 @@ pipeline {
             }   
     }
 }
+
         
         
         
