@@ -21,14 +21,14 @@ pipeline {
                 '''
             }   
     }
-            stage('Checkout') {
+            stage('Test1') {
             steps {
                 sh '''
                 $Ver1
                 '''
             }
         }
-        stage('Shell-Script') {
+        stage('Test2') {
             steps {
                 sh '''
                 $Ver
