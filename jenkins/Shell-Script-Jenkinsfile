@@ -1,4 +1,8 @@
 pipeline {
+    environment{
+        ver = "test"
+        ver1 = "testing"
+    }
     stages {
         stage('Checkout')
             steps {
