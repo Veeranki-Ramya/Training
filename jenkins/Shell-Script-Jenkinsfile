@@ -25,6 +25,7 @@ pipeline {
             steps {
                 sh '''
                 $Ver1
+                rm test123
                 '''
             }
         }
