@@ -9,33 +9,22 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh '''
-                $Ver1
-                '''
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-credentails', url: 'https://github.com/Veeranki-Ramya/Training.git']])
             }
         }
         stage('Shell-Script') {
             steps {
                 sh '''
                 $Ver
-                '''
-            }   
-    }
-            stage('Test1') {
-            steps {
-                sh '''
                 $Ver1
-                rm test123
-                '''
-            }
-        }
-        stage('Test2') {
-            steps {
-                sh '''
-                $Ver
                 '''
             }   
     }
+        stage('Clean-Workspace') {
+            steps {
+                cleanWs()
+            }
+        }   
 }
 }
 
