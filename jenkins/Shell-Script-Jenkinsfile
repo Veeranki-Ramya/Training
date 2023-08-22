@@ -3,8 +3,7 @@ pipeline {
         label 'my-agent'
     }
     environment{
-        ver = "test"
-        ver1 = "testing"
+        Ver = "ls"
     }
     stages {
         stage('Checkout') {
@@ -18,8 +17,7 @@ pipeline {
         stage('Shell-Script') {
             steps {
                 sh '''
-                ls
-                pwd
+                $Ver
                 '''
             }   
     }
